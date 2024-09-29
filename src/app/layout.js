@@ -1,16 +1,6 @@
-import localFont from "next/font/local";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Navbar from "@/components/navbar/navbar";
+import Sidebar from "@/components/sidebar/sidebar";
 
 export const metadata = {
   title: "Create Next App",
@@ -20,10 +10,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body style={{ fontFamily: 'Outfit, sans-serif', margin: 0 }} className="antialiased">
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+          <div style={{ backgroundColor: 'black', position: 'sticky', top: '0', zIndex: '1000' }}>
+            <Navbar />
+          </div>
+          <div style={{ display: 'flex', flex: '1', marginTop: '0px', position: 'sticky' }}> {/* Add marginTop to create space below navbar */}
+            <div>
+              <Sidebar />
+            </div>
+            <div style={{ flex: 1, padding: '20px' }}>
+              {children}
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );
