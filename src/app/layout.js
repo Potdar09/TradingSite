@@ -9,28 +9,30 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body style={{ fontFamily: 'Outfit, sans-serif', margin: 0 }} className="antialiased">
-        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-          <div style={{ backgroundColor: 'black', position: 'sticky', top: '0', zIndex: '1000' }}>
-            <Navbar />
-          </div>
-          <div style={{ display: 'flex', flex: '1', marginTop: '0px', position: 'sticky' }}> {/* Add marginTop to create space below navbar */}
-            <div>
-              <Sidebar />
-            </div>
-            <div style={{ flex: 1, padding: '20px' }}>
-              {children}
-            </div>
-          </div>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body className="font-outfit m-0 antialiased">
+    <div className="flex flex-col h-screen">
+      <div className="bg-black sticky top-0 z-[1000]">
+        <Navbar />
+      </div>
+      <div className="flex flex-row">
+        <div>
+          <Sidebar />
         </div>
-      </body>
-    </html>
+        
+        <div className="flex-1 p-5">
+          {children}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
   );
 }
