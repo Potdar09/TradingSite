@@ -1,5 +1,6 @@
 import Card from "@/components/cards/indexcard";
 import GainerBox from "@/components/tile/gainerbox/gainer";
+import InvestBox from "@/components/tile/investments/investmentbox";
 import LoserBox from "@/components/tile/loserbox/loserbox";
 import NewsCard from "@/components/tile/newsbox";
 
@@ -24,6 +25,7 @@ export default function Home() {
         <div>
         <h1 className="text-3xl ml-10 font-bold ">Stock News</h1>
         <NewsCard title="News 1" content="Content 4" />
+        <InvestBox title="News 1" content="Content 4"/>
         </div>
         </div>
         <div className="flex flex-col ">
