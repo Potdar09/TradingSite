@@ -1,5 +1,7 @@
 import Card from "@/components/cards/indexcard";
+import GainerBox from "@/components/tile/gainerbox/gainer";
 import AreaChart from "@/components/tile/graphbox";
+import LoserBox from "@/components/tile/loserbox/loserbox";
 import NewsCard from "@/components/tile/newsbox";
 
 import Image from "next/image";
@@ -11,7 +13,7 @@ export default function Home() {
       <div className="flex flex-col">
       <h1 className="text-3xl ml-10  font-bold ">Indices</h1>    
       <div className="flex flex-row justify-start">
-        <Card title="Sensex" content="+5124" Points="Point 1"/>
+        <Card title="Sensex" content="+5124" Points="Points"/>
         <Card title="Nifty 50" content="+200"/>
         <Card title="Nasdaq" content="+12.56 "/>
         </div>
@@ -19,7 +21,14 @@ export default function Home() {
         <div>
         <h1 className="text-3xl ml-10 font-bold ">Stock News</h1>
         <NewsCard title="News 1" content="Content 4" />
+        <AreaChart />
         </div>
+        </div>
+        <div className="flex flex-col ">
+        <h1 className="text-3xl ml-10 font-bold ">Top Gainers</h1>    
+        <GainerBox title="Gainers" content="Content 3" />
+        <h1 className="text-3xl ml-10 font-bold mt-5">Top Losers</h1>    
+        <LoserBox title="Losers" content="Content 3" />
         </div>
     </>
   );
