@@ -13,7 +13,7 @@ export default function Home() {
       <div className="flex flex-col">
       <h1 className="text-3xl ml-10  font-bold ">Indices</h1>    
       <div className="flex flex-row justify-start">
-        <Card title="Sensex" content="+5124" Points="Points"/>
+        <Card title="Sensex" content="+5124" Points="Points" Open="512.1"/>
         <Card title="Nifty 50" content="+200"/>
         <Card title="Nasdaq" content="+12.56 "/>
         </div>

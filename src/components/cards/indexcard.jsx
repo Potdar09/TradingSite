@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({ title, content, Points }) => {
+const Card = ({ title, content, Points, Open }) => {
   return (
     <div className="flex flex-col">
      <div className="flex flex-row justify-start hover:scale-105 duration-300 ease-in">
@@ -8,7 +8,7 @@ const Card = ({ title, content, Points }) => {
       <h1 className="text-2xl font-bold mb-2">{title}</h1>
       <p className="text-3xl font-bold mb-2 text-[#0FEDBE]">{content}</p>
       <p className="text-white">{Points}</p>
-      
+      <p className="text-white">{Open}</p>
     </div>
     </div>
     
