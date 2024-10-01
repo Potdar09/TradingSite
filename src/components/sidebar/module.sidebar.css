@@ -1,14 +1,14 @@
-.sidebar{
+.sidebar {
      position: sticky;
      display: flex;
      flex-direction: column;
-     background-color: #000000;
+     background-color: #111827;
      border-right: #58BAFF 3px solid;
-     height: 100%;
-     width: 220px;
-     top: 0;
-}
-
+     height: calc(100vh - 90px); /* Adjust height based on your navbar's height */
+     width: 80px;
+     top: 86px; /* Match this value to your navbar's height */
+ }
+ 
 .sidebarIcon{
      width: 30px;
      height: 30px;

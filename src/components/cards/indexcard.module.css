@@ -26,11 +26,18 @@
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  
+}
+
+.card:hover {
+  box-shadow: 0 2px 4px #0FEDBE;
 }
 
 .title {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-top: -0.5rem;
 
 }
 
@@ -43,9 +50,7 @@
 .contentText {
   color: #999999;
 }
-.contentVal{
 
-}
 /* Grid layout for columns */
 .gridContainer {
   display: grid;
@@ -66,6 +71,7 @@
   flex-direction: column;
   justify-content: flex-start; /* Align to start */
   align-items: center;
+  
 }
   
 
@@ -73,4 +79,7 @@
   color: #0FEDBE;
   display: flex;
   flex-direction: column;
+  justify-items: flex-start;
 }
+
+
