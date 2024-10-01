@@ -5,7 +5,7 @@ import { GoGraph } from "react-icons/go";
 import { PiGraph } from "react-icons/pi";
 const sidebar = () => {
   return (
-    <div className="sidebar">
+    <div className="sidebar ">
      <RiHome3Line className="sidebarIcon" />
      <RiStockLine className="sidebarIcon" />
      <GoGraph className="sidebarIcon" />

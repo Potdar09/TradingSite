@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-gray-300 dark:bg-gray-900 shadow">
+    <nav className="bg-white border-gray-300 dark:bg-gray-900 shadow position-fixed">
       <div className="w-100% flex flex-wrap items-center justify-center ml-[40px] mr-[40px] p-4">
         {/* Logo */}
         <Link href="https://flowbite.com/" className="flex items-start space-x-3 rtl:space-x-reverse">
