@@ -2,8 +2,8 @@
      position: sticky;
      display: flex;
      flex-direction: column;
-     background-color: #111827;
-     border-right: #58BAFF 3px solid;
+     background-color: #16181B;
+     border-right: #58BAFF 1px solid;
      height: calc(100vh - 86px);
      width: 80px; 
      top: 86px;

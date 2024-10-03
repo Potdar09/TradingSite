@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-gray-300 dark:bg-gray-900 shadow border-gray-200 position-fixed w-full">
+    <nav className="bg-white border-gray-300 bg-[#16181B] shadow border-gray-200 position-fixed w-full">
       <div className="w-100% flex flex-wrap items-center justify-center ml-[40px] mr-[40px] p-4">
        <Link href="https://flowbite.com/" className="flex items-start space-x-3 rtl:space-x-reverse">
           <img
@@ -54,10 +54,10 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } w-full justify-end items-end md:block md:w-auto`}
+          } w-full justify-end  bg-[#16181B] items-end md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 jus">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white bg-[#1A1A1E] md:dark:bg-[#16181B] dark:border-gray-700 jus">
             <li>
               <Link
                 href="#"

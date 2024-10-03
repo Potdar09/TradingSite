@@ -29,7 +29,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: linear-gradient(to right, #1b1f2f 5%, black 100%);
+    --background: #080C0B;
     --foreground: white;
   }
 }
@@ -48,7 +48,7 @@ body {
 
 html, body {
   height: 100%;
-  background-color: #111827;
+  background-color: #080C0B;
   overflow-x: hidden;
 }
 
