@@ -3,6 +3,7 @@ import { FaUser } from "react-icons/fa";
 import { useState } from "react";
 import Link from "next/link";
 import SearchForm from "../searchbar/searchbar";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,15 +12,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-gray-300 bg-[#16181B] shadow border-gray-200 position-fixed w-full">
-      <div className="w-100% flex flex-wrap items-center justify-center ml-[40px] mr-[40px] p-4">
-       <Link href="https://flowbite.com/" className="flex items-start space-x-3 rtl:space-x-reverse">
+    <nav className="bg-[#16181B] border-gray-300 shadow border-gray-200 w-full">
+      <div className="w-full flex flex-wrap items-center justify-center ml-[40px] mr-[40px] p-4">
+        <Link href="https://flowbite.com/" className="flex items-start space-x-3 rtl:space-x-reverse">
           <img
             src="https://flowbite.com/docs/images/logo.svg"
             className="h-8"
             alt="Flowbite Logo"
           />
-          <span className="self-start text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-start text-2xl font-semibold whitespace-nowrap text-white">
             FinTorr
           </span>
         </Link>
@@ -54,14 +55,14 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } w-full justify-end  bg-[#16181B] items-end md:block md:w-auto`}
+          } w-full justify-end bg-[#16181B] items-end md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white bg-[#1A1A1E] md:dark:bg-[#16181B] dark:border-gray-700 jus">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-[#1A1A1E] md:bg-[#16181B] dark:border-gray-700">
             <li>
               <Link
                 href="#"
-                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                className="block py-2 px-3 text-white rounded md:p-0"
                 aria-current="page"
               >
                 Dashboard
@@ -70,7 +71,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-2 px-3 text-gray-400 rounded hover:bg-gray-100 dark:hover:bg-gray-700 md:p-0"
               >
                 Paper Trading
               </Link>
@@ -78,7 +79,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-2 px-3 text-gray-400 rounded hover:bg-gray-100 dark:hover:bg-gray-700 md:p-0"
               >
                 Predictions
               </Link>
@@ -86,7 +87,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-2 px-3 text-gray-400 rounded hover:bg-gray-100 dark:hover:bg-gray-700 md:p-0"
               >
                 Pricing
               </Link>
@@ -94,12 +95,12 @@ const Navbar = () => {
             <li>
               <Link
                 href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-2 px-3 text-gray-400 rounded hover:bg-gray-100 dark:hover:bg-gray-700 md:p-0"
               >
                 About
               </Link>
             </li>
-            <FaUser className="text-2xl" />
+            <FaUser className="text-2xl text-white" />
           </ul>
         </div>
       </div>

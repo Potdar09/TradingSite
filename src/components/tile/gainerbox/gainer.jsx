@@ -71,7 +71,7 @@ const StockBox = () => {
           <tbody>
             {stocks.slice(0, 2).map((stock, index) => (
               <tr key={index}>
-                <td>{stock.name}<br /><span>{stock.fullName}</span></td>
+                <td>{stock.name}<br/><span>{stock.fullName}</span></td>
                 <td style={{ color: '#0FEDBE' }}>{stock.price}</td>
                 <td style={{ color: stock.change.includes('-') ? '#F63C6B' : '#0FEDBE' }}>{stock.change}</td>
                 <td>{stock.changePercent}</td>
