@@ -22,11 +22,11 @@ export default function Home() {
           <GainerBox />
       
         </div>
-        <div className="flex flex-col">
-            <h1 className="text-3xl ml-10 font-bold ">Stock News</h1>
+        <div className="flex flex-col w-full">
+            <h1 className="text-3xl ml-10 font-bold">Stock News</h1>
             <NewsCard title="News 1" content="Content 4" />
             <h1 className="text-3xl ml-10 mt-5 font-bold ">Investments</h1>
-            <InvestBox title="News 1" content="Content 4"/>
+            <InvestBox />
           </div>
       </div>
     </>
