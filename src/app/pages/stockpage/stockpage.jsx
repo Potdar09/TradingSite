@@ -1,31 +1,39 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-
 import styles from './StockPage.module.css';
 
 const StockPage = () => {
-  const [view, setView] = useState("all"); 
- 
+  const [view, setView] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
+  const stocksPerPage = 5; // Change this to display more or fewer stocks per page
 
   const allStocks = [
     { name: "Apple", symbol: "AAPL", price: 180.34, change: "+1.12%", volume: "75M", avgVolume: "70M", marketCap: "2.4T", peRatio: "30", high52wk: "182", low52wk: "120" },
     { name: "Amazon", symbol: "AMZN", price: 130.11, change: "-0.24%", volume: "55M", avgVolume: "50M", marketCap: "1.3T", peRatio: "40", high52wk: "150", low52wk: "100" },
-    // Add more stocks
+    { name: "Tesla", symbol: "TSLA", price: 250.34, change: "+3.45%", volume: "90M", avgVolume: "80M", marketCap: "800B", peRatio: "75", high52wk: "300", low52wk: "200" },
+    { name: "Nvidia", symbol: "NVDA", price: 420.12, change: "+4.12%", volume: "100M", avgVolume: "95M", marketCap: "1.2T", peRatio: "60", high52wk: "500", low52wk: "350" },
+    // Add more stocks as needed
   ];
 
   const trendingStocks = [
-    { name: "Tesla", symbol: "TSLA", price: 250.34, change: "+3.45%", volume: "90M", avgVolume: "80M", marketCap: "800B", peRatio: "75", high52wk: "300", low52wk: "200" },
-    { name: "Nvidia", symbol: "NVDA", price: 420.12, change: "+4.12%", volume: "100M", avgVolume: "95M", marketCap: "1.2T", peRatio: "60", high52wk: "500", low52wk: "350" },
-    // Add trending stocks
+    { name: "Meta", symbol: "META", price: 300.12, change: "+2.45%", volume: "80M", avgVolume: "75M", marketCap: "900B", peRatio: "25", high52wk: "350", low52wk: "250" },
+    { name: "Microsoft", symbol: "MSFT", price: 320.44, change: "+1.12%", volume: "65M", avgVolume: "60M", marketCap: "2.2T", peRatio: "35", high52wk: "350", low52wk: "280" },
+    // Add more trending stocks
   ];
 
   const stocksToDisplay = view === "all" ? allStocks : trendingStocks;
+  const indexOfLastStock = currentPage * stocksPerPage;
+  const indexOfFirstStock = indexOfLastStock - stocksPerPage;
+  const currentStocks = stocksToDisplay.slice(indexOfFirstStock, indexOfLastStock);
 
   const handleStockClick = (symbol) => {
     // Redirect to a detailed stock page (dynamic route can be based on the stock symbol)
-    router.push(`/stocks/${symbol}`);
+    // Uncomment the below line when `router` is imported
+    // router.push(`/stocks/${symbol}`);
   };
+
+  const totalPages = Math.ceil(stocksToDisplay.length / stocksPerPage);
 
   return (
     <div className={`${styles.container}`}>
@@ -39,7 +47,10 @@ const StockPage = () => {
           className={`${styles.button} ${
             view === "all" ? styles.activeButton : styles.inactiveButton
           }`}
-          onClick={() => setView("all")}
+          onClick={() => {
+            setView("all");
+            setCurrentPage(1); // Reset to first page
+          }}
         >
           All Stocks
         </button>
@@ -47,7 +58,10 @@ const StockPage = () => {
           className={`${styles.button} ${
             view === "trending" ? styles.activeButton : styles.inactiveButton
           }`}
-          onClick={() => setView("trending")}
+          onClick={() => {
+            setView("trending");
+            setCurrentPage(1); // Reset to first page
+          }}
         >
           Trending Stocks
         </button>
@@ -72,7 +86,7 @@ const StockPage = () => {
             </tr>
           </thead>
           <tbody>
-            {stocksToDisplay.map((stock, index) => (
+            {currentStocks.map((stock, index) => (
               <tr
                 key={index}
                 onClick={() => handleStockClick(stock.symbol)}
@@ -105,6 +119,19 @@ const StockPage = () => {
             ))}
           </tbody>
         </table>
+      </div>
+
+      {/* Pagination */}
+      <div className={styles.pagination}>
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index}
+            className={`${styles.pageButton} ${currentPage === index + 1 ? styles.activePageButton : ''}`}
+            onClick={() => setCurrentPage(index + 1)}
+          >
+            {index + 1}
+          </button>
+        ))}
       </div>
     </div>
   );

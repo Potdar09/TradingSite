@@ -17,7 +17,6 @@
      color: white;
    }
    
-   
    .toggleButtons {
      display: flex;
      justify-content: flex-end;
@@ -83,13 +82,11 @@
      width: 10%; 
    }
    
-   
    .stockTable tbody tr:hover {
      background-color: #2A2D34;
      cursor: pointer;
    }
    
-
    .threeDots {
      font-size: 1.5rem;
      cursor: pointer;
@@ -100,7 +97,6 @@
      display: block;
    }
    
-  
    .dropdownMenu {
      display: none;
      position: absolute;
@@ -119,5 +115,30 @@
    
    .dropdownMenu a:hover {
      background-color: #2563eb;
+   }
+   
+   /* Pagination styles */
+   .pagination {
+     display: flex;
+     justify-content: center;
+     margin-top: 1rem;
+   }
+   
+   .pageButton {
+     padding: 0.5rem 1rem;
+     margin: 0 0.2rem;
+     border: none;
+     background-color: #2563eb;
+     color: white;
+     cursor: pointer;
+     border-radius: 5px;
+   }
+   
+   .pageButton:hover {
+     background-color: #1d4ed8;
+   }
+   
+   .activePageButton {
+     background-color: #1d4ed8;
    }
    
