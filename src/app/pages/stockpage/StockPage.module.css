@@ -1,0 +1,123 @@
+.container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 2rem;
+   }
+   
+   .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 1.5rem;
+   }
+   
+   .title {
+     font-size: 2rem;
+     font-weight: bold;
+     color: white;
+   }
+   
+   
+   .toggleButtons {
+     display: flex;
+     justify-content: flex-end;
+     gap: 1rem;
+     margin-bottom: 1rem;
+   }
+   
+   .button {
+     padding: 0.5rem 1rem;
+     border-radius: 5px;
+     cursor: pointer;
+   }
+   
+   .activeButton {
+     background-color: #2563eb;
+     color: white;
+   }
+   
+   .inactiveButton {
+     background-color: #16181B;
+   }
+   
+   .stockTableContainer {
+     background-color: #16181b;
+     padding: 1.5rem;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   }
+   
+   .stockTable {
+     width: 100%;
+     color: white;
+     border-collapse: collapse;
+   }
+   
+   .stockTable th,
+   .stockTable td {
+     padding: 0.75rem;
+     text-align: left;
+     border-bottom: 1px solid #333;
+   }
+   
+   .stockTable th {
+     font-weight: bold;
+     text-transform: uppercase;
+   }
+   
+   .stockTable th:nth-child(1),
+   .stockTable td:nth-child(1) {
+     width: 30%; 
+   }
+   
+   .stockTable th:nth-child(2),
+   .stockTable td:nth-child(2),
+   .stockTable th:nth-child(3),
+   .stockTable td:nth-child(3),
+   .stockTable th:nth-child(4),
+   .stockTable td:nth-child(4),
+   .stockTable th:nth-child(5),
+   .stockTable td:nth-child(5),
+   .stockTable th:nth-child(6),
+   .stockTable td:nth-child(6) {
+     width: 10%; 
+   }
+   
+   
+   .stockTable tbody tr:hover {
+     background-color: #2A2D34;
+     cursor: pointer;
+   }
+   
+
+   .threeDots {
+     font-size: 1.5rem;
+     cursor: pointer;
+     display: inline-block;
+   }
+   
+   .threeDots:hover .dropdownMenu {
+     display: block;
+   }
+   
+  
+   .dropdownMenu {
+     display: none;
+     position: absolute;
+     background-color: #16181B;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     border-radius: 5px;
+     padding: 0.5rem;
+   }
+   
+   .dropdownMenu a {
+     color: white;
+     text-decoration: none;
+     display: block;
+     padding: 0.5rem 1rem;
+   }
+   
+   .dropdownMenu a:hover {
+     background-color: #2563eb;
+   }
+   

@@ -1,10 +1,10 @@
 import Card from "@/components/cards/indexcard";
 import GainerBox from "@/components/tile/gainerbox/gainer";
 import InvestBox from "@/components/tile/investments/investmentbox";
-import LoserBox from "@/components/tile/loserbox/loserbox";
 import NewsCard from "@/components/tile/newsbox";
 
 import Image from "next/image";
+import StockPage from "./pages/stockpage/stockpage";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
           
           </div>
           <GainerBox />
-      
+          <StockPage />
         </div>
         <div className="flex flex-col w-full">
             <h1 className="text-3xl ml-10 font-bold">Stock News</h1>
@@ -28,6 +28,7 @@ export default function Home() {
             <h1 className="text-3xl ml-10 mt-5 font-bold ">Investments</h1>
             <InvestBox />
           </div>
+         
       </div>
     </>
   );
