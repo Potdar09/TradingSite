@@ -4,7 +4,7 @@ import InvestBox from "@/components/tile/investments/investmentbox";
 import NewsCard from "@/components/tile/newsbox";
 
 import Image from "next/image";
-import StockPage from "./pages/stockpage/stockpage";
+import StockPage from "./stockpage/page";
 
 export default function Home() {
   return (
@@ -14,13 +14,16 @@ export default function Home() {
           <h1 className="text-3xl ml-5 mb-4 font-bold ">Indices</h1>    
           <div className="flex flex-row justify-between ml-5 mr-5">
             
-            <Card title="Sensex" points='+522.60' dayChange="+100" dayChangePerc="+0.25" open="52700.40" high="52900.40" low="52300.40" low52wk="52300.40"/>
+            {/* <Card title="Sensex" points='+522.60' dayChange="+100" dayChangePerc="+0.25" open="52700.40" high="52900.40" low="52300.40" low52wk="52300.40"/>
             <Card title="Nifty 50" points='+522.60' dayChange="+100" dayChangePerc="+0.25" open="52700.40" high="52900.40" low="52300.40" low52wk="52300.40"/>
-            <Card title="Nasdaq" points='+522.60' dayChange="+100" dayChangePerc="+0.25" open="52700.40" high="52900.40" low="52300.40" low52wk="52300.40"/>
-          
+            <Card title="Nasdaq" points='+522.60' dayChange="+100" dayChangePerc="+0.25" open="52700.40" high="52900.40" low="52300.40" low52wk="52300.40"/> */}
+            <Card symbol="^BSESN" title="Sensex" />
+            <Card symbol="^NSEI" title="Nifty 50" />
+            <Card symbol="^IXIC" title="Nasdaq" />
+
           </div>
           <GainerBox />
-          <StockPage />
+
         </div>
         <div className="flex flex-col w-full">
             <h1 className="text-3xl ml-10 font-bold">Stock News</h1>

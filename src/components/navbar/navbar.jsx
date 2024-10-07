@@ -61,7 +61,7 @@ const Navbar = () => {
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-[#1A1A1E] md:bg-[#16181B] dark:border-gray-700">
             <li>
               <Link
-                href="#"
+                href="/"
                 className="block py-2 px-3 text-white rounded md:p-0"
                 aria-current="page"
               >
@@ -70,7 +70,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="#"
+                href="/paperTrading"
                 className="block py-2 px-3 text-gray-400 rounded hover:bg-gray-100 dark:hover:bg-gray-700 md:p-0"
               >
                 Paper Trading
@@ -78,7 +78,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="#"
+                href="/prediction"
                 className="block py-2 px-3 text-gray-400 rounded hover:bg-gray-100 dark:hover:bg-gray-700 md:p-0"
               >
                 Predictions
