@@ -4,7 +4,7 @@ import InvestBox from "@/components/tile/investments/investmentbox";
 import NewsCard from "@/components/tile/newsbox";
 
 import Image from "next/image";
-import StockPage from "./stockpage/page";
+import StockPage from "./stockpage/stockpage";
 
 export default function Home() {
   return (
@@ -23,7 +23,6 @@ export default function Home() {
 
           </div>
           <GainerBox />
-
         </div>
         <div className="flex flex-col w-full">
             <h1 className="text-3xl ml-10 font-bold">Stock News</h1>
