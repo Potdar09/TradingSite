@@ -19,7 +19,7 @@ export default function Home() {
             <Card title="Nasdaq" points='+522.60' dayChange="+100" dayChangePerc="+0.25" open="52700.40" high="52900.40" low="52300.40" low52wk="52300.40"/> */}
             <Card symbol="^BSESN" title="Sensex" />
             <Card symbol="^NSEI" title="Nifty 50" />
-            <Card symbol="^IXIC" title="Nasdaq" />
+            <Card symbol="^NSEBANK" title="BankNifty" />
 
           </div>
           <GainerBox />
